@@ -1,0 +1,15 @@
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\bin\Debug\net6.0\SpiralMatrixGenerator.exe
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\bin\Debug\net6.0\SpiralMatrixGenerator.deps.json
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\bin\Debug\net6.0\SpiralMatrixGenerator.runtimeconfig.json
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\bin\Debug\net6.0\SpiralMatrixGenerator.dll
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\bin\Debug\net6.0\SpiralMatrixGenerator.pdb
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.csproj.AssemblyReference.cache
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.AssemblyInfoInputs.cache
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.AssemblyInfo.cs
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.csproj.CoreCompileInputs.cache
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.dll
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\refint\SpiralMatrixGenerator.dll
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.pdb
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\SpiralMatrixGenerator.genruntimeconfig.cache
+C:\WORK\SSWU\SSWU_ArtemPapeta_NET_CAMP\Home_task_1\SpiralMatrixGenerator\SpiralMatrixGenerator\obj\Debug\net6.0\ref\SpiralMatrixGenerator.dll

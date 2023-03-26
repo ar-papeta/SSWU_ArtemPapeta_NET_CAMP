@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\MAXINSAN\\.nuget\\packages\\": {}
+    "C:\\Users\\Artem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WORK\\SSWU\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\SpiralMatrixGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\Artem\\Source\\Repos\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\SpiralMatrixGenerator.csproj",
       "projectName": "SpiralMatrixGenerator",
-      "projectPath": "C:\\WORK\\SSWU\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\SpiralMatrixGenerator.csproj",
-      "packagesPath": "C:\\Users\\MAXINSAN\\.nuget\\packages\\",
-      "outputPath": "C:\\WORK\\SSWU\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\obj\\",
+      "projectPath": "C:\\Users\\Artem\\Source\\Repos\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\SpiralMatrixGenerator.csproj",
+      "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Artem\\Source\\Repos\\SSWU_ArtemPapeta_NET_CAMP\\Home_task_1\\SpiralMatrixGenerator\\SpiralMatrixGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MAXINSAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

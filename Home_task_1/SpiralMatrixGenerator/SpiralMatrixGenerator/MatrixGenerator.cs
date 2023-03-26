@@ -11,18 +11,9 @@ internal class MatrixGenerator
 {
     private int[,] _matrix;
     public int N { get; set; }
-    public int M {
-        get
-        {
-            return ;
-        }
-        set
-        { 
-            if(value < 0)
-                throw new ArgumentOutOfRangeException("value");
-            M = value;
-        } }
+    public int M { get; set; }
     public Direction Direction { get; set; }
+    private int _currentNumber = 1;
 
     public MatrixGenerator(int n, int m, Direction direction)
     {
@@ -32,64 +23,108 @@ internal class MatrixGenerator
         _matrix = new int[N, M];
     }
 
-    public void Create()
+    public void Generate()
     {
-        SetNLoop();  
+        _currentNumber = 1;
+
+        if (Direction == Direction.CW) 
+        {
+            ProccessCwDir(); 
+        }
+        else
+        {
+            ProccessCcwDir();
+        }
     }
 
-
-        
-    
-    int currentNumber = 1;
-    public void SetNLoop()
+    private void ProccessCcwDir()
     {
-        var outCounter = 0;
         int loop = 0;
-        while(outCounter < 4 && loop < N && loop < M)
+        while (loop < N && loop < M)
+        {
+            for (int i = loop; i < N - loop; i++)
+            {
+                if (_matrix[i, loop] != 0)
+                {
+                    break;
+                }
+                _matrix[i, loop] = _currentNumber++;
+            }
+
+            for (int i = loop + 1; i < M - loop; i++)
+            {
+                if (_matrix[N - 1 - loop, i] != 0)
+                {
+                    break;
+                }
+                _matrix[N - 1 - loop, i] = _currentNumber++;
+            }
+
+            for (int i = N - loop - 2; i >= loop; i--)
+            {
+                if (_matrix[i, M - loop - 1] != 0)
+                {
+                    break;
+                }
+                _matrix[i, M - loop - 1] = _currentNumber++;
+            }
+
+            for (int i = M - loop - 2; i > loop ; i--)
+            {
+                if (_matrix[loop, i] != 0)
+                {
+                    break;
+                }
+                _matrix[loop, i] = _currentNumber++;
+            }
+
+            loop++;
+        }
+    }
+
+    
+    public void ProccessCwDir()
+    {
+        int loop = 0;
+        while(loop < N && loop < M)
         {
             for (int i = loop; i < M - loop - 1; i++)
             {
                 if(_matrix[loop, i] != 0)
                 {
-                    outCounter++;
                     break;
                 }
-                _matrix[loop, i] = currentNumber++;
+                _matrix[loop, i] = _currentNumber++;
             }
 
             for (int i = loop; i < N - loop - 1; i++)
             {
                 if (_matrix[i, M - loop - 1] != 0)
                 {
-                    outCounter++;
                     break;
                 }
-                _matrix[i, M - loop - 1] = currentNumber++;
+                _matrix[i, M - loop - 1] = _currentNumber++;
             }
 
             for (int i = M - loop - 1; i >= loop; i--)
             {
                 if (_matrix[N - 1 - loop, i] != 0)
                 {
-                    outCounter++;
                     break;
                 }
-                _matrix[N - 1 - loop, i] = currentNumber++;
+                _matrix[N - 1 - loop, i] = _currentNumber++;
             }
 
             for (int i = N - loop - 2; i > loop; i--)
             {
                 if (_matrix[i, loop] != 0)
                 {
-                    outCounter++;
                     break;
                 }
-                _matrix[i, loop] = currentNumber++;
+                _matrix[i, loop] = _currentNumber++;
             }
-
             loop++;
-        }
-        
+        } 
     }
 
     public override string ToString()

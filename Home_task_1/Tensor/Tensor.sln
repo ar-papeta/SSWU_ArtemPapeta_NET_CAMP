@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tensor", "Tensor\Tensor.csproj", "{1AA0CACE-C116-4B4D-B2CC-3428AAE8EE9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AA0CACE-C116-4B4D-B2CC-3428AAE8EE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA0CACE-C116-4B4D-B2CC-3428AAE8EE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA0CACE-C116-4B4D-B2CC-3428AAE8EE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA0CACE-C116-4B4D-B2CC-3428AAE8EE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02F6E489-8F66-4A71-AD71-D112D21D82BE}
+	EndGlobalSection
+EndGlobal

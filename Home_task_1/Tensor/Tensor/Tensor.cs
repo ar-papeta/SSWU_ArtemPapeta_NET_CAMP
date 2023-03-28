@@ -6,7 +6,8 @@ namespace Tensor;
 internal class Tensor<T>
 {
     
-    private T[] _arr;
+
+    private T[] _data;
 
     private int[] _dimensions;
 
@@ -16,7 +17,7 @@ internal class Tensor<T>
 
     public int ItemsMaxCount { get; private set; }
 
-    public long Rank => _dimensions.Length;
+    public long DimensionsCount => _dimensions.Length;
 
 
     private void SetItemsMaxCount()
@@ -36,18 +37,24 @@ internal class Tensor<T>
         TensorValidator.ValidateDimensionsLength(dimensions);
         _dimensions = dimensions ?? Array.Empty<int>();
         SetItemsMaxCount();
-        _arr = new T[ItemsMaxCount];
+        _data = new T[ItemsMaxCount];
     }
 
     public bool TryAddItems(object boxedItems) 
     {
-        var items = EnumerateObject(boxedItems);
-        if(ItemsCount + items.Length > ItemsMaxCount)
+        if(ItemsCount == ItemsMaxCount)
         {
             return false;
         }
 
-        items.CopyTo(_arr, ItemsCount);
+        var items = EnumerateObject(boxedItems);
+
+        if (ItemsCount + items.Length > ItemsMaxCount)
+        {
+            return false;
+        }
+
+        items.CopyTo(_data, ItemsCount);
         ItemsCount += items.Length;
        
         return true;
@@ -58,7 +65,7 @@ internal class Tensor<T>
         TensorValidator.ValidateDimensionsLength(dimensions);
         _dimensions = dimensions ?? Array.Empty<int>();
         SetItemsMaxCount();
-        _arr = new T[ItemsMaxCount];
+        _data = new T[ItemsMaxCount];
 
         TryAddItems(o);
         TensorValidator.ValidateElementsCount(ItemsMaxCount, ItemsCount);
@@ -70,26 +77,28 @@ internal class Tensor<T>
         {
 
             var index = TransformIndexFrom(indexes);
-            return _arr[index];
+            return _data[index];
         }
         set
         {
             var index = TransformIndexFrom(indexes);
-            _arr[index] = value;
+            _data[index] = value;
         }
     }
     private int TransformIndexFrom(int[] indexes)
     {
-        if (indexes.Length > Rank)
+        if (indexes.Length > DimensionsCount)
         {
             throw new ArgumentException("Unreal rank of index");
         }
 
         int index = indexes[^1];
+        int extraElements = _dimensions[^1];
 
         for (int i = indexes.Length - 2; i >= 0; i--)
         {
-            index += indexes[i] * _dimensions[i];
+            index += indexes[i] * extraElements;
+            extraElements *= _dimensions[i];
         }
 
         TensorValidator.ValidateIndex(_dimensions, index);
@@ -100,7 +109,7 @@ internal class Tensor<T>
     public override string ToString()
     {
         string result = "";
-        foreach (var item in _arr)
+        foreach (var item in _data)
         {
             result += $" {item}";
         }
@@ -114,7 +123,7 @@ internal class Tensor<T>
         if (checkSingle is null)
         {
             _isSingleValue = true;
-            _arr[ItemsCount] = (T)o;
+            _data[ItemsCount] = (T)o;
             return new T[] { (T)o };
         }
         try

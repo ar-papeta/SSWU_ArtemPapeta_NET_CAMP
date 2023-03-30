@@ -61,7 +61,10 @@ internal class MatrixLineFinder
                 }
             }
         }
+        // не враховано, що найдовша лінія може бути в кінці стрічки.
+        //Результат варто передавати як параметри методу.
     }
+    // Цей метод тут не потрібний
     public void PrintInfoToConsole()
     {
         Console.WriteLine(this);

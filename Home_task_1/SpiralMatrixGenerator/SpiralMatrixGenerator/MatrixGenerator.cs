@@ -32,7 +32,7 @@ internal class MatrixGenerator
             ProccessCwDir(); 
         }
         else
-        {
+        {// Не дуже вдала назва процесів
             ProccessCcwDir();
         }
     }
@@ -40,6 +40,7 @@ internal class MatrixGenerator
     private void ProccessCcwDir()
     {
         int loop = 0;
+        // не оптимальний процес. Є лишні перевірки, яких можна уникнути
         while (loop < N && loop < M)
         {
             for (int i = loop; i < N - loop; i++)

@@ -23,6 +23,16 @@ internal class User
         WaterBalance -= amount;
     }
 
+    public void AddToBalance(double balance)
+    {
+        WaterBalance += balance;
+    }
+
+    public void RemoveFromBalance(double balance)
+    {
+        WaterBalance -= balance;
+    }
+
     public override string ToString()
     {
         return $"User {Id} has balance {WaterBalance} and consumption {CurrentConsumption}";

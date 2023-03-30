@@ -16,13 +16,17 @@ internal class Pump
     public Pump(double rate)
     {
         State = PumpState.Off;
+        if(rate <= 0)
+        {
+            throw new Exception($"Unreal rate for {rate} pump");
+        }
         Rate = rate;
     }
 
     public void OnPump() => State = PumpState.On;
     public void OffPump() => State = PumpState.Off;
 
-    public double WaterPumping()
+    public double WaterPumpingUp()
     {
         OnPump();
         var waterCount = Rate;

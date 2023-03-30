@@ -54,7 +54,7 @@ internal class MatrixLineFinder
                 if (sameColorLineLen > _lineInfo.Length)
                 {
                     _lineInfo.Length = sameColorLineLen;
-                    _lineInfo.StartPoint = (i, j - sameColorLineLen);
+                    _lineInfo.StartPoint = (i, j - sameColorLineLen + 1);
                     _lineInfo.EndPoint = (i, j);
                     _lineInfo.Color = _matrix[i, j];
                     _lineInfo.MatrixLineIndex = i;

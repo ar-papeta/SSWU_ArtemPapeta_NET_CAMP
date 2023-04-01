@@ -19,9 +19,13 @@ internal class WaterTower
             if (value <= 0)
             {
                 StartWaterPumpingUp();
-                value = 0;
+                _currentWaterLevel = 0;
             }
-            _currentWaterLevel = value;
+            else
+            {
+                _currentWaterLevel = value;
+            }
+            
         }
     }
 

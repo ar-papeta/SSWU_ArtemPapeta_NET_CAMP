@@ -8,6 +8,23 @@ internal class WaterTower
     private double _maxWaterLevel;
     private double _minWaterLevel = 0;  //Minimum level for turn on pump if level is lower
 
+    public double CurrentWaterLevel
+    {
+        get
+        {
+            return _currentWaterLevel;
+        }
+        set
+        {
+            if (value <= 0)
+            {
+                StartWaterPumpingUp();
+                value = 0;
+            }
+            _currentWaterLevel = value;
+        }
+    }
+
     public WaterTower(Pump pump, double maxWaterLevel)
     {
         _pump = pump;
@@ -15,13 +32,12 @@ internal class WaterTower
 
     }
 
-    public void WaterPumpingUp()
+    public void StartWaterPumpingUp()
     {
         while(_currentWaterLevel < _maxWaterLevel)
         {
             _currentWaterLevel += _pump.WaterPumpingUp();
         }
-
     }
 
     public void GiveWater(double amount)

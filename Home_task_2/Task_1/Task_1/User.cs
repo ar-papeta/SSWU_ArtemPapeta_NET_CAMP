@@ -11,6 +11,16 @@ internal class User
     public Guid Id { get; }
     public double WaterBalance { get; set; }
     public double CurrentConsumption { get; set; }
+    public double ConsumptionRatePerSecond { get; set; }
+
+    public User(double waterBalance)
+    {
+        if(waterBalance < 0)
+        {
+            throw new Exception("Negative balance!");
+        }
+        WaterBalance = waterBalance;
+    }
 
     public User()
     {
@@ -21,6 +31,20 @@ internal class User
     {
         CurrentConsumption += amount;
         WaterBalance -= amount;
+    }
+
+    public void ConsumeWater(TimeSpan time)
+    {
+        
+    }
+
+    public void StartConsumption()
+    {
+
+    }
+    public void StopConsumption()
+    {
+
     }
 
     public void AddToBalance(double balance)

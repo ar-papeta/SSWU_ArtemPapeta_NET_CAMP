@@ -11,4 +11,3 @@ Console.WriteLine($"Count words start with capital letter is {userInput!.FirstCa
 userInput = userInput!.SwapDoubleLettersTo(subString!);
 Console.WriteLine($"New string with swaped double letters to \"{subString}\": \n{userInput!}");
 
-

@@ -24,6 +24,6 @@ internal static class StringExt
         return input.Split(' ')
                 .Select(x =>
                     x.Where((c, i) => i > 0 && c == x[i - 1]).Cast<char?>().FirstOrDefault() is not null ? x.Replace(x, text) : x)
-                .Aggregate((s1, s2) => String.Format("{0} {1}", s1, s2)); ;
+                .Aggregate((s1, s2) => String.Format("{0} {1}", s1, s2)); 
     }
 }

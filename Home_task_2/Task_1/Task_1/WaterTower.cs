@@ -35,7 +35,7 @@ internal class WaterTower
         _maxWaterLevel = maxWaterLevel; 
 
     }
-
+//Цей процес має відбуватись в часі...Вода не прокачується миттєво
     public void StartWaterPumpingUp()
     {
         while(_currentWaterLevel < _maxWaterLevel)

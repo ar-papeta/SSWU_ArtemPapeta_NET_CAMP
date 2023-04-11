@@ -1,5 +1,5 @@
 ﻿using Task_2;
-
+// 1 Задача Ромбик мав би бути напрямлений до башти в стрілці від помпи. Симулятор має композиційно вежу та користувача. Він створює ці об'єкти.
 Console.WriteLine("Enter string");
 string? userInput = Console.ReadLine();
 

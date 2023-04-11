@@ -18,7 +18,7 @@ internal static class StringExt
 
         return index == -1 ? null : index;
     }
-
+// тут є проблема. Можемо обговорити...
     public static string SwapDoubleLettersTo(this string input, string text)
     {
         return input.Split(' ')

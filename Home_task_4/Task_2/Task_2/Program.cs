@@ -1,7 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using Task_2;
-
-Console.WriteLine("Hello, World!");
 
 string EmailText =
     //valid
@@ -19,10 +17,12 @@ string EmailText =
     + '\n'
     + "admin@mailserver1"
     + '\n'
-    + "(this is ( comment in email)simple@example.com(domain comment)"
+    + "(this .. is ( comment in email)simple@example.com(domain comment)"
     + '\n'
+    + "postmaster@[123.123.123.123]"
     + '\n'
-    + '\n'
+    + "postmaster@[IPv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334]"
+    +'\n'
     //invalid
     + "Abc.example.com"
     + '\n'
@@ -32,6 +32,9 @@ string EmailText =
     + '\n'
     + "just\"not\"right@example.com";
 
-string s = "\"simple\"@example.com";
-EmailChecker checker = new EmailChecker(s);
-checker.IsCorrectMail();
+EmailChecker checker = new(EmailText);
+var list = checker.GetCorrectEmailsList();
+foreach (var item in list)
+{
+    Console.WriteLine(item);
+}

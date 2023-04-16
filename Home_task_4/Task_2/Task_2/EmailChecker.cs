@@ -23,9 +23,20 @@ internal class EmailChecker
     {
         _emails = text.Split(_splitChars).ToList();
     }
+    public List<string> GetInvalidEmailsListWithAt()
+    {
+        List<string> correctEmails = new();
+        foreach (string email in _emails)
+        {
+            if (!IsCorrectMail(email) && email.Contains('@'))
+            {
+                correctEmails.Add(email);
+            }
+        }
+        return correctEmails;
+    }
 
-
-    public List<string> GetCorrectEmailsList()
+    public List<string> GetValidEmailsList()
     {
         List<string> correctEmails = new();
         foreach (string email in _emails) 

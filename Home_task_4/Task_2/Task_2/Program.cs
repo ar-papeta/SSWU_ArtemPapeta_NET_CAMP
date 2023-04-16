@@ -33,8 +33,19 @@ string EmailText =
     + "just\"not\"right@example.com";
 
 EmailChecker checker = new(EmailText);
-var list = checker.GetCorrectEmailsList();
-foreach (var item in list)
+var validList = checker.GetValidEmailsList();
+Console.WriteLine("\tValid e-mails list:\n");
+foreach (var item in validList)
 {
     Console.WriteLine(item);
 }
+
+Console.WriteLine("\n----------------------------------\n");
+
+var invalidList = checker.GetInvalidEmailsListWithAt();
+Console.WriteLine("\tInvalid e-mails list with '@' char:\n");
+foreach (var item in invalidList)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("\n----------------------------------\n");

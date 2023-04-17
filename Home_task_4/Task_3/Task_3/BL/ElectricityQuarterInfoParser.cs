@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using Task_3.Models;
 
-namespace Task_3;
+namespace Task_3.BL;
 
 internal static class ElectricityQuarterInfoParser
 {
@@ -28,7 +28,7 @@ internal static class ElectricityQuarterInfoParser
     private static (int, int) FirstLineParse(string firstLine)
     {
         var firstLineInfo = firstLine.Split('\t');
-        if(firstLineInfo.Length != 2) 
+        if (firstLineInfo.Length != 2)
         {
             throw new Exception("First line parse error");
         }
@@ -39,10 +39,10 @@ internal static class ElectricityQuarterInfoParser
     private static void ParseModelConsumers(ref ElectricityQuarterInfoModel model, int count, string[] lines)
     {
         for (int i = 0; i < count; i++)
-        {          
+        {
             var parts = lines[i].Split('\t');
 
-            if(parts.Length != 11)
+            if (parts.Length != 11)
             {
                 throw new Exception("invalid consumer line");
             }
@@ -55,13 +55,14 @@ internal static class ElectricityQuarterInfoParser
             consumerModel.FinalCounterReading = double.Parse(parts[4], CultureInfo.InvariantCulture);
             consumerModel.CounterReadings = new()
             {
-                new(){ Reading = double.Parse(parts[6], CultureInfo.InvariantCulture), Date = Convert.ToDateTime(parts[5])},
-                new(){ Reading = double.Parse(parts[8], CultureInfo.InvariantCulture), Date = Convert.ToDateTime(parts[7])},
-                new(){ Reading = double.Parse(parts[10], CultureInfo.InvariantCulture), Date = Convert.ToDateTime(parts[9])},
+                new(){ Reading = double.Parse(parts[6], CultureInfo.InvariantCulture), Date = DateTime.ParseExact(parts[5], "dd.MM.yy", null) },
+                new(){ Reading = double.Parse(parts[8], CultureInfo.InvariantCulture), Date = DateTime.ParseExact(parts[7], "dd.MM.yy", null)},
+                new(){ Reading = double.Parse(parts[10], CultureInfo.InvariantCulture), Date = DateTime.ParseExact(parts[9], "dd.MM.yy", null)},
 
             };
+
             model.Consumers.Add(consumerModel);
         }
     }
-    
+
 }

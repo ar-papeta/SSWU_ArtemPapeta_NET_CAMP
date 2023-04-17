@@ -113,4 +113,26 @@ internal class Garden
     public static bool operator >(Garden garden1, Garden garden2) => garden1.HullLength() > garden2.HullLength();
     public static bool operator >=(Garden garden1, Garden garden2) => garden1.HullLength() >= garden2.HullLength();
     public static bool operator <=(Garden garden1, Garden garden2) => garden1.HullLength() <= garden2.HullLength();
+
+    public override bool Equals(object? obj)
+    {
+        if(obj is null || obj is not Garden)
+        {
+            return false;
+        }
+
+        return this == ((Garden)obj);
+    }
+
+    public override int GetHashCode()
+    {
+        int hash = 7;
+        hash = 31 * hash;
+        foreach (var item in _trees)
+        {
+            hash *= item.X;
+            hash *= item.Y; 
+        }
+        return hash;
+    }
 }

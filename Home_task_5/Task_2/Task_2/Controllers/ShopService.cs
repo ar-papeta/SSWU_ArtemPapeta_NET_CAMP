@@ -16,13 +16,18 @@ namespace Task_2.Controllers
         {
             _shopModel = new()
             {
-                Id = Guid.NewGuid(),
                 Box = new BoxModel(),
             };
         }
         public ShopService(ShopModel shopModel)
         {
             _shopModel = shopModel;
+        }
+
+        public void ChangeBox(BoxModel box)
+        {
+            _shopModel.Box = box;
+            _shopModel.NodeCategory.Box = box;
         }
         public void ChangeShopName(string? name) => _shopModel.Name ??= name;
 
@@ -40,16 +45,18 @@ namespace Task_2.Controllers
 
             _shopModel.Box.Height += category.Box.Height;
 
-            _shopModel.Categories!.Add(category);
+            _shopModel.NodeCategory!.ChildCategories.Add(category);
         }
 
         public ShopCategoryModel GetCategoryById(Guid? id)
         {
-            return _shopModel.Categories.Find(g => g.Id == id);
+            return _shopModel.NodeCategory!.ChildCategories.Find(g => g.Id == id)!;
         }
 
         public string GetShopName() => _shopModel?.Name ?? string.Empty;
 
-        public List<ShopCategoryModel> GetShopCategories() => _shopModel.Categories;
+        public List<ShopCategoryModel> GetShopCategories() => _shopModel.NodeCategory!.ChildCategories.Where(x => x.ParentCategoryId == Guid.Empty).ToList();
+
+        public ShopModel GetShop() => _shopModel;
     }
 }

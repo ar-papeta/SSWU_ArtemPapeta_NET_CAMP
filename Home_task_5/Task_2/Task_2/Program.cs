@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Task_2.Controllers;
+using Task_2.Views;
+
+IView ConsoleView = new ConsoleView(new ShopService());
+
+ConsoleView.ShowMenu();

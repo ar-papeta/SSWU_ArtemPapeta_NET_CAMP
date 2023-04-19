@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Newtonsoft.Json;
 
-namespace Task_2.Models
+namespace Task_2.Models;
+
+internal class ShopItemModel
 {
-    internal class ShopItemModel
-    {
-    }
+    [JsonIgnore]
+    public Guid Id { get; set; }
+    public string? Name { get; set; }
+    public string? CategoryName { get; set; }
+    public BoxModel? Box { get; set; } = new ();
 }
+    

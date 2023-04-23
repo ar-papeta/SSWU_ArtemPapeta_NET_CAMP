@@ -20,7 +20,7 @@ namespace Task_2.Controllers
             };
         }
         public ShopService(ShopModel shopModel)
-        {
+        {// Не хороша прив'язка. Слід робити клон(глибоку копію)
             _shopModel = shopModel;
         }
 

@@ -7,7 +7,7 @@ using Task_2.Models;
 using Task_2.Views;
 
 namespace Task_2.Controllers
-{
+{//це не досконалий варіант контролера. Він має бути у вигляді паттерну Посередник.
     internal class ShopService
     {
         private readonly ShopModel _shopModel;

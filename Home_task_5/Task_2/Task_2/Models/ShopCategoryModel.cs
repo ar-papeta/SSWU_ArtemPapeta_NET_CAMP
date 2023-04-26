@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System.Reflection;
 
 namespace Task_2.Models;
-
+// Тут найлаконічніше використати паттерн Компонувальник. У Вас не повна його версія.
 internal class ShopCategoryModel
 {
     [JsonIgnore]

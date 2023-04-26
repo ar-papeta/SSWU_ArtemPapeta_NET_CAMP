@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace Task_1;
 
 internal class Garden
-{
+{// Молодець. Оскільки алгоритмів є кілька, то цікаво, чи знаєте переваги і недоліки цього підходу?
     private readonly List<Tree> _trees;
 
     public Garden(List<Tree> trees)
-    {
+    {// Має бути  _trees = new List<Tree>(trees)
         _trees = trees;
     }
 

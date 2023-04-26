@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+// Anatolii	Kolesnyk			85	10	15	95	90	60	40	86,5
 using Task_1;
 
 Tree[] trees = new Tree[7];

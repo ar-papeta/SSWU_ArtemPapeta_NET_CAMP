@@ -3,7 +3,7 @@
 using Task_3;
 using Task_3.BL;
 using Task_3.View;
-
+// Останній стовпець погано форматований.
 var model = ElectricityQuarterInfoParser.ParseModelFromText(SeedData.FirstQuarterData);
 
 IElectricityQuarterInfoView view = new ElectricityQuarterInfoViewConsole(new(model));

@@ -12,6 +12,7 @@ internal class SentenceFinder
     private readonly List<string> _lines;
     private readonly char[] _textChars;
     private readonly char[] _sentenceSeparators = new char[] { '!', '.', '?'};
+    // Краще зберігати парами. Наприклад, масив кортежів
     private readonly char[] _openChars = new char[] { '(', '[', '{' };
     private readonly char[] _closedChars = new char[] { ')', ']', '}' };
 

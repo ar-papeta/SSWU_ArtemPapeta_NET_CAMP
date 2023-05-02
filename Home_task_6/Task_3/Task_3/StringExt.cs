@@ -10,7 +10,7 @@ public static class StringExt
 {
     public static char[] TextSeparators = {' ', '\t' };
     public static IEnumerable<string> UniqueWords(this string text)
-    {
+    {// у такій реалізації дійсно не має сенсу, тому що Ви вже повністю згенерували послідовність, а тоді починаєте по одному викидати, а треба викидати елемент під час генерації
         return text.Split(TextSeparators, StringSplitOptions.RemoveEmptyEntries).GroupBy(x => x).Where(x => x.Count() == 1).Select(i => i.Key);
         // yield return інкапсульовано в linq вираз
 

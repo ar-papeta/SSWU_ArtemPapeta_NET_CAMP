@@ -12,9 +12,10 @@ internal static class MatrixEnumerator
     public static IEnumerable<int> EnumerateMatrix(params int[][] nums)
     {
         if(nums is null || nums.Length == 0)
-        {
+        {// чому не виняток?
             yield break;
         }
+        // посортує. Але проаналізуйте ефективність.
         var resArr = nums.Aggregate((arr, arrNext) => arr.Concat(arrNext).Order().ToArray());
         for (int i = 0; i < resArr.Length; i++)
         {

@@ -36,7 +36,7 @@ internal class MatrixIterator : IEnumerable
     }
 
     public IEnumerator GetEnumerator()
-    {
+    {// Задача розв'язується  за 2 вкладені цикли. У Вас 3 вкладені. Тому алгоритмічно - не правильно.
         int elementNumber = 1;
         int diagonalNumber = 0;
         int dir = 1;

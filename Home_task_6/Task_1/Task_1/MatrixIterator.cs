@@ -13,7 +13,7 @@ internal class MatrixIterator : IEnumerable
     }
 
     public MatrixIterator(int[,] values)
-    {
+    {// Можна Array.Copy теж.
         _values = (values.Clone() as int[,])!;
     }
 

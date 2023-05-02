@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task_3;
-
+// сумарний бал 92.
 public static class StringExt
 {
     public static char[] TextSeparators = {' ', '\t' };

@@ -9,6 +9,6 @@ namespace Task_1.View;
 
 public interface IView
 {
-    public event Func<(string name, string state)[]> PrintInfoNotify;
-    public void PrintInfo(int time);
+    public event Func<(string name, string state)[]> ShowInfoNotify;
+    public void ShowInfo(int time);
 }

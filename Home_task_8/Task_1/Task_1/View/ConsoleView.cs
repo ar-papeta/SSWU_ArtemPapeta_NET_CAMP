@@ -5,10 +5,10 @@ namespace Task_1.View;
 
 public class ConsoleView : IView
 {
-    public event Func<(string name, string state)[]> PrintInfoNotify = null!;
-    public void PrintInfo(int time)
+    public event Func<(string name, string state)[]> ShowInfoNotify = null!;
+    public void ShowInfo(int time)
     {
-        var info = PrintInfoNotify?.Invoke();
+        var info = ShowInfoNotify?.Invoke();
         Validator.ValidateViewInfo(info!);
         ShowFullReport(info!, time);
     }

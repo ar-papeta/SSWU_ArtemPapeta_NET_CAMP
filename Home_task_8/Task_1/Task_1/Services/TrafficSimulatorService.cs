@@ -25,7 +25,7 @@ public class TrafficSimulatorService
         _controller = controller;
         _simulationTimeSec = sec;
         _view = view;
-        _view.PrintInfoNotify += _controller.GetAllTrafficLightsInfo;
+        _view.ShowInfoNotify += _controller.GetAllTrafficLightsInfo;
     }
 
     public void StartSimulation()
@@ -38,7 +38,7 @@ public class TrafficSimulatorService
     private int i = 0;
     private void DoWork(object? o)
     {
-        _view.PrintInfo(i);
+        _view.ShowInfo(i);
 
         if (++i > _simulationTimeSec) 
         {

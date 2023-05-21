@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1.Models.OrderModels
 {
-    public class Dessert : Dish, IDish
+    public class Dessert : IDish
     {
         public async Task<IDish> CookAsync()
         {

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task1.Models.OrderModels;
 
-public class Drink : Dish, IDish
+public class Drink : IDish
 {
-    public Task<IDish> CookAsync()
+    public async Task<IDish> CookAsync()
     {
         return this;
     }

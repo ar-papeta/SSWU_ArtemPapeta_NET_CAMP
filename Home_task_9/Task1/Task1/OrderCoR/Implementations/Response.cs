@@ -13,12 +13,12 @@ public class Response : IResponse
 {
     public Guid Id { get; }
 
-    public Order Order => throw new NotImplementedException();
+    public Order Order { get; }
 
-    public OrderExecutionInfo Info => throw new NotImplementedException();
+    public OrderExecutionInfo Info { get; }
 
     public Response(IReadOnlyCollection<string> messages)
     {
-        Messages = messages;
+        
     }
 }

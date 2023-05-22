@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1.Models.OrderModels
+namespace Task1.Models.OrderModels;
+
+public class Dessert : IDish
 {
-    public class Dessert : IDish
+    public string Name { get; set; }
+    public int CookingTimeInSec { get; set; }
+    public bool IsReady { get; set; }
+    public async Task<IDish> CookAsync()
     {
-        public async Task<IDish> CookAsync()
-        {
-            //await CookAsync();
-            return this;
-        }
+        //await CookAsync();
+        return this;
     }
 }

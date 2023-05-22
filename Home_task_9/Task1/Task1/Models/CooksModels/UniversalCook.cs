@@ -13,6 +13,7 @@ public class UniversalCook : ICook<IDish>
 
     public IDish Cooking(IDish dish)
     {
-        throw new NotImplementedException();
+        var task = dish.CookAsync();
+        return task.Result;
     }
 }

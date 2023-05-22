@@ -17,7 +17,7 @@ public class Response : IResponse
 
     public OrderExecutionInfo Info { get; }
 
-    public Response(IReadOnlyCollection<string> messages)
+    public Response()
     {
         
     }

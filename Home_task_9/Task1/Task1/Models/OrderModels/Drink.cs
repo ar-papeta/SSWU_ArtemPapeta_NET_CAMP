@@ -8,6 +8,9 @@ namespace Task1.Models.OrderModels;
 
 public class Drink : IDish
 {
+    public string Name { get; set; }
+    public int CookingTimeInSec { get; set; }
+    public bool IsReady { get; set; }
     public async Task<IDish> CookAsync()
     {
         return this;

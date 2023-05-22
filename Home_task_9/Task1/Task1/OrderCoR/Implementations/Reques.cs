@@ -12,11 +12,12 @@ namespace Task1.OrderCoR.Implementations;
 public class Request : IRequest
 {
     public Guid Id { get; }
-    public Order Order => throw new NotImplementedException();
+    public Order Order { get; }
 
-    public Request(int id, IReadOnlyCollection<string> messages)
+    public Request(Order order)
     {
         Id = Guid.NewGuid();
+        Order = order;
     }
 }
 

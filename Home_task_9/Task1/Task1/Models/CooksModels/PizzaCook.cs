@@ -9,6 +9,6 @@ public class PizzaCook : ICook<Pizza>
 
     public Pizza Cooking(Pizza dish)
     {
-        throw new NotImplementedException();
+        return dish.CookAsync().Result as Pizza;
     }
 }

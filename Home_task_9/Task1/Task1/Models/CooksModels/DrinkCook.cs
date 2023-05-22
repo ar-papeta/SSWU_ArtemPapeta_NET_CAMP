@@ -13,6 +13,7 @@ public class DrinkCook : ICook<Drink>
 
     public Drink Cooking(Drink dish)
     {
-        throw new NotImplementedException();
+        var task = dish.CookAsync();
+        return task.Result as Drink;
     }
 }

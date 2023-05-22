@@ -14,7 +14,7 @@ public abstract class HandlerBase : IHandler
     public virtual IHandler SetNextHandler(IHandler next)
     {
         NextHandler = next;
-        return this;
+        return next;
     }
 
     public abstract IResponse Handle(IRequest request);

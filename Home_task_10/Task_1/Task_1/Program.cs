@@ -3,7 +3,7 @@ using Task_1;
 
 string[] strCards = 
 {
-    "# American Express # card_number = “378282246310005”",
+    "# American   Express # card_number = “378282246310005”",
     "# MasterCard # card_number = “5555555555554444”",
     "# Visa # card_number = “4003789100205381”",
     "# Visa # card_number = “4003789100209999”",

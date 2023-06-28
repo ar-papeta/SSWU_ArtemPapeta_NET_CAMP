@@ -15,7 +15,7 @@ class Program
         // Save data to a file
         FileHelper.SaveDataToFile(data, "data.txt");
 
-        // Sort the data using merge sort (WITHOT ANY ARRAYS STORE IN RAM memory)
+        // Sort the data using merge sort (WITHOUT ANY ARRAYS STORE IN RAM memory)
         FileMergeSort.MergeSort("data.txt", DATA_COUNT, RAM_ALLOWED);
     }
 
